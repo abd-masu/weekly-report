@@ -28803,7 +28803,7 @@ function renderDetailLeft(p){
               ${weekLabel(h.week)}
               ${h.hlType==='pos'?'<span class="h-badge h-badge-pos">☆ HL</span>':h.hlType==='neg'?'<span class="h-badge h-badge-neg">★ HL</span>':''}
             </div>
-            <div class="h-progress">${esc(h.progress)}</div>
+            <div class="h-progress">${h.progress||''}</div>
             ${h.nextAction?`<div class="h-next">→ 次のアクション: <span>${esc(h.nextAction)}</span></div>`:''}
           </div>`).join('')}
           ${history.length > 10 ? `
@@ -28814,7 +28814,7 @@ function renderDetailLeft(p){
                 ${weekLabel(h.week)}
                 ${h.hlType==='pos'?'<span class="h-badge h-badge-pos">☆ HL</span>':h.hlType==='neg'?'<span class="h-badge h-badge-neg">★ HL</span>':''}
               </div>
-              <div class="h-progress">${esc(h.progress)}</div>
+              <div class="h-progress">${h.progress||''}</div>
               ${h.nextAction?`<div class="h-next">→ 次のアクション: <span>${esc(h.nextAction)}</span></div>`:''}
             </div>`).join('')}
           </div>
