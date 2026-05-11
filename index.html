@@ -28698,6 +28698,7 @@ function renderDetailLeft(p){
     .filter(Boolean);
 
   const left = document.getElementById('detailLeft');
+  if(!left) return;
   left.innerHTML = `
     <!-- Overview Card -->
     <div class="overview-card" id="ov-card">
@@ -28828,6 +28829,7 @@ function renderDetailLeft(p){
 
 function renderDetailRight(p){
   const right = document.getElementById('detailRight');
+  if(!right) return;
   const allHLs = Object.entries(HIGHLIGHTS).flatMap(([w,hls])=>
     hls.filter(h=>h.projectId===p.id).map(h=>({...h,week:w}))
   );
@@ -29042,6 +29044,7 @@ function showReport(){
 function renderReport(){
   const picks = REPORT_PICKS[currentWeek]||[];
   const el = document.getElementById('reportWrap');
+  if(!el) return;
   el.innerHTML = `
     <div class="rp-week-sel">
       <label>対象週:</label>
