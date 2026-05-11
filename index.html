@@ -28525,9 +28525,9 @@ function renderList(searchQ){
   buildWeekSelect();
   const viewWeek = document.getElementById('fWeek')?.value || currentWeek;
   currentWeek = viewWeek;
-  const cat    = document.getElementById('fCat').value;
-  const owner  = document.getElementById('fOwner').value;
-  const status = document.getElementById('fStatus').value;
+  const cat    = document.getElementById('fCat')?.value||'';
+  const owner  = document.getElementById('fOwner')?.value||'';
+  const status = document.getElementById('fStatus')?.value||'';
   const sbQ    = document.getElementById('sbSearch')?.value||'';
   const fQ     = document.getElementById('fSearch')?.value||'';
   const q = (searchQ || fQ || sbQ).toLowerCase().trim();
